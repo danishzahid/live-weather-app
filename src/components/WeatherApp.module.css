@@ -1,0 +1,50 @@
+/* WeatherApp.module.css */
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Light background color */
+}
+
+.weatherInfo {
+  margin-top: 20px;
+}
+
+.weatherIcon {
+  width: 100px; /* Adjust the size based on your preference */
+  height: 100px;
+}
+
+/* Define animations for weather icons */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations to specific weather conditions */
+.weatherIcon.sun {
+  animation: spin 10s linear infinite; /* Rotate the sun */
+}
+
+.weatherIcon.cloud {
+  animation: spin 20s linear infinite; /* Rotate the cloud */
+}
+
+.weatherIcon.rain {
+  animation: rain 0.5s linear infinite; /* Rain animation */
+}
+
+/* Add more styles and animations as needed */
